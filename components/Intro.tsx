@@ -2,8 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import {AuroraBackground} from "@/components/ui/aurora-background";
-import {Bodoni_Moda,JetBrains_Mono} from "next/font/google";
-import {TypewriterEffect} from "@/components/ui/typewriter-effect";
+import {Bodoni_Moda} from "next/font/google";
 const bodoniModa = Bodoni_Moda({
     variable: "--font-bodoni",
     subsets: ["latin"],

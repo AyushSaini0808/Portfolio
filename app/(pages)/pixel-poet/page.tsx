@@ -38,7 +38,7 @@ export default function PixelPoet() {
                             <p className="leading-relaxed">
                                 PixelPoet is a minimalist ASCII art generator web app deployed on Vercel. It transforms images into expressive ASCII representations by mapping pixel brightness to corresponding text characters.
 
-                                Each pixel's color intensity is analyzed and translated into an ASCII symbol, which is then rendered using the pre tag to preserve formatting and alignment. The result is a stylized, text-based version of the original image—perfect for nostalgic vibes or unique visual storytelling.
+                                Each pixel&apos;s color intensity is analyzed and translated into an ASCII symbol, which is then rendered using the pre tag to preserve formatting and alignment. The result is a stylized, text-based version of the original image—perfect for nostalgic vibes or unique visual storytelling.
                             </p>
                         </div>
                     </div>

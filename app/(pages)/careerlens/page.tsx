@@ -41,7 +41,7 @@ export default function CareerLens() {
                                 personalized recommendations.
                             </p>
                             <p className="leading-relaxed">
-                                Whether you're a student exploring career options, a professional looking to advance,
+                                Whether you&apos;re a student exploring career options, a professional looking to advance,
                                 or someone considering a career change, CareerLens provides the intelligent guidance
                                 you need to move forward with confidence.
                             </p>
@@ -89,7 +89,7 @@ export default function CareerLens() {
                 <div>
                     <Image src={"/prepify_logo.png"} alt={"StockSage logo"} width={550} height={550} className={"rounded-3xl mb-6"} />
                     <Image src={"/career-lens.png"} alt={"StockSage logo"} width={550} height={550} className={"mt-6"}/>
-                </div>  
+                </div>
             </section>
         </main>
     );

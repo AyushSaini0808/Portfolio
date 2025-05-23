@@ -39,7 +39,7 @@ export default function TensorBloom() {
                                 Tensor Bloom is a beginner-friendly learning platform built to make machine learning more accessible and less overwhelming. It focuses on core topics like Linear Algebra, Statistics, Probability, and Deep Learning, delivering content through visual explanations and concise, text-based lessons. Unlike traditional resources that dump theory without context, Tensor Bloom breaks down complex concepts into digestible modules.
                             </p>
                             <p className="leading-relaxed">
-                                The platform is built using React and Next.js, and is currently under active development. Upcoming features include community forums to foster peer learning and support. Whether you're just starting out or looking to strengthen your ML foundation, Tensor Bloom aims to be your go-to launchpad.
+                                The platform is built using React and Next.js, and is currently under active development. Upcoming features include community forums to foster peer learning and support. Whether you&apos;re just starting out or looking to strengthen your ML foundation, Tensor Bloom aims to be your go-to launchpad.
                             </p>
                         </div>
                     </div>

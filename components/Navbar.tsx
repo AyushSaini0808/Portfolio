@@ -14,7 +14,6 @@ const jetBrainsMono = JetBrains_Mono({
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
 
     // Handle scroll effect
     useEffect(() => {
