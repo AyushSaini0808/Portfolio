@@ -14,6 +14,7 @@ const jetBrainsMono = JetBrains_Mono({
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     // Handle scroll effect
     useEffect(() => {
@@ -29,7 +30,7 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    // Close menu when clicking outside
+    // Close menu when clicking outside or on escape key
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (isMenuOpen && !event.target.closest('nav')) {
@@ -37,8 +38,19 @@ const Navbar = () => {
             }
         };
 
+        const handleEscapeKey = (event) => {
+            if (event.key === 'Escape' && isMenuOpen) {
+                setIsMenuOpen(false);
+            }
+        };
+
         document.addEventListener('click', handleClickOutside);
-        return () => document.removeEventListener('click', handleClickOutside);
+        document.addEventListener('keydown', handleEscapeKey);
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+            document.removeEventListener('keydown', handleEscapeKey);
+        };
     }, [isMenuOpen]);
 
     // Prevent scroll when mobile menu is open
