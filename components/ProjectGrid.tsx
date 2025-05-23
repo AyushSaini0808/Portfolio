@@ -28,7 +28,7 @@ const projects = [
         href: '/careerlens',
         label: 'CareerLens',
         description: 'An AI-powered Resume Analyzer and Interview Coach',
-        image: '/prepify_img.png'
+        image: '/prepify_logo.png'
     },
 ];
 
