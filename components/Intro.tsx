@@ -10,13 +10,8 @@ const bodoniModa = Bodoni_Moda({
     weight:"800",
     style:"italic"
 });
-const jetBrainsMono = JetBrains_Mono({
-    variable: "--font-jetbrains",
-    subsets: ["latin"],
-    weight:"800",
-});
+
 export function AuroraBackgroundDemo() {
-    const statmnt1=[{text:"machine"},{text:"learning"},{text:"student"}]
     return (
         <AuroraBackground>
             <motion.div

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Pixelify_Sans } from "next/font/google";
-import {Palette, Scale, Rabbit, ExternalLink, Pen, Map, Rocket} from "lucide-react";
+import {Pen, Map, Rocket} from "lucide-react";
 
 const pixelify = Pixelify_Sans({
     variable: "--font-pixel",

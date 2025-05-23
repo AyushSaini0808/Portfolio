@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {Lato} from "next/font/google";
 import "./globals.css";
-// import {FloatingNavDemo} from "@/components/FloatingNav";
 
 
 const lato = Lato({

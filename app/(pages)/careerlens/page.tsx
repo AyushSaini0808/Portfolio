@@ -88,10 +88,8 @@ export default function CareerLens() {
                 </article>
                 <div>
                     <Image src={"/prepify_logo.png"} alt={"StockSage logo"} width={550} height={550} className={"rounded-3xl mb-6"} />
-                    <Image src={"/website.png"} alt={"StockSage logo"} width={550} height={550} />
                     <Image src={"/career-lens.png"} alt={"StockSage logo"} width={550} height={550} className={"mt-6"}/>
-                    <Image src={"/prediction.png"} alt={"StockSage logo"} width={550} height={650} className={"mt-6 rounded-lg"}/>
-                </div>
+                </div>  
             </section>
         </main>
     );
