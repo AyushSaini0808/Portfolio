@@ -4,7 +4,6 @@ import React from 'react';
 import { BackgroundGradientDemo } from "@/components/Logo";
 import { JetBrains_Mono } from "next/font/google";
 import { Menu, X } from 'lucide-react';
-import Link from "next/link";
 
 const jetBrainsMono = JetBrains_Mono({
     variable: "--font-jetbrains",
@@ -73,7 +72,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        <nav className={`sticky ${jetBrainsMono.className} top-0 z-50 w-full transition-all duration-300 ${
             scrolled
                 ? 'bg-black/90 backdrop-blur-md shadow-lg border-b border-white/10'
                 : 'bg-black/95'
