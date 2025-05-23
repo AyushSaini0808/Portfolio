@@ -1,15 +1,8 @@
-'use client';
+"use client";
 import { useState, useEffect } from 'react';
-import React from 'react';
-import { BackgroundGradientDemo } from "@/components/Logo";
-import { JetBrains_Mono } from "next/font/google";
 import { Menu, X } from 'lucide-react';
+import {BackgroundGradientDemo} from "@/components/Logo";
 
-const jetBrainsMono = JetBrains_Mono({
-    variable: "--font-jetbrains",
-    subsets: ["latin"],
-    weight: "800",
-});
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,13 +24,13 @@ const Navbar = () => {
 
     // Close menu when clicking outside or on escape key
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (isMenuOpen && !event.target.closest('nav')) {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (isMenuOpen && event.target && event.target instanceof Element && !event.target.closest('nav')) {
                 setIsMenuOpen(false);
             }
         };
 
-        const handleEscapeKey = (event) => {
+        const handleEscapeKey = (event: KeyboardEvent) => {
             if (event.key === 'Escape' && isMenuOpen) {
                 setIsMenuOpen(false);
             }
@@ -72,7 +65,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`sticky ${jetBrainsMono.className} top-0 z-50 w-full transition-all duration-300 ${
+        <nav className={`sticky top-0 z-50 w-full transition-all duration-300 ${
             scrolled
                 ? 'bg-black/90 backdrop-blur-md shadow-lg border-b border-white/10'
                 : 'bg-black/95'
@@ -90,7 +83,7 @@ const Navbar = () => {
                                 key={link.name}
                                 href={link.href}
                                 target={link.external ? "_blank" : undefined}
-                                className="text-white hover:text-blue-400 transition-all duration-200 relative group text-lg font-medium"
+                                className="text-white hover:text-blue-400 transition-all duration-200 relative group font-medium text-lg"
                                 rel={link.external ? "noopener noreferrer" : undefined}
                             >
                                 {link.name}
@@ -101,7 +94,7 @@ const Navbar = () => {
                             href="https://drive.google.com/file/d/1s-2822sgp-96oeCdYcfj9nBVGnufGpYs/view?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-gradient-to-r text-lg from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+                            className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
                             aria-label="View Resume"
                         >
                             Resume
