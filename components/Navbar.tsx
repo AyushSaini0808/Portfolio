@@ -182,9 +182,6 @@ const Navbar = () => {
                         transform: translateY(0);
                     }
                 }
-                .animate-fadeInUp {
-                    animation: fadeInUp 0.6s ease-out forwards;
-                }
             `}</style>
         </nav>
     );

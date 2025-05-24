@@ -1,11 +1,25 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Image from "next/image";
 
-const projects = [
+interface Project {
+    href: string;
+    label: string;
+    description: string;
+    image: string;
+}
+
+interface ProjectCardProps {
+    href: string;
+    label: string;
+    index: number;
+    description: string;
+    image: string;
+}
+
+const projects: Project[] = [
     {
         href: '/stocksage',
         label: 'StockSage',
@@ -32,7 +46,7 @@ const projects = [
     },
 ];
 
-const ProjectCard = ({ href, label, index, description, image }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ href, label, index, description, image }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
@@ -59,7 +73,7 @@ const ProjectCard = ({ href, label, index, description, image }) => {
             y: 50,
             rotateX: 10
         },
-        visible: (i) => ({
+        visible: (i: number) => ({
             opacity: 1,
             y: 0,
             rotateX: 0,
@@ -100,7 +114,7 @@ const ProjectCard = ({ href, label, index, description, image }) => {
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
         >
-            <Link
+            <a
                 href={href}
                 className="block h-full overflow-hidden relative rounded-xl transition-all duration-300"
             >
@@ -109,8 +123,7 @@ const ProjectCard = ({ href, label, index, description, image }) => {
                     <Image
                         src={image}
                         alt={label}
-                        fill
-                        className={`object-cover transition-all duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}
+                        className={`w-full h-full object-cover transition-all duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}
                     />
                     {/* Overlay to ensure text visibility */}
                     <div className={`absolute inset-0 bg-gradient-to-t from-black/70 to-black/20 transition-opacity duration-300 ${isHovered ? 'opacity-75' : 'opacity-60'}`}></div>
@@ -156,12 +169,12 @@ const ProjectCard = ({ href, label, index, description, image }) => {
                         {isMobile ? "Tap to view" : "View Project →"}
                     </motion.div>
                 </motion.div>
-            </Link>
+            </a>
         </motion.div>
     );
 };
 
-const ProjectGrid = () => {
+const ProjectGrid: React.FC = () => {
     // Container variants for the overall grid
     const containerVariants = {
         hidden: { opacity: 0 },
