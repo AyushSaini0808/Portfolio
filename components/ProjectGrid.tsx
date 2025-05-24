@@ -123,6 +123,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ href, label, index, descripti
                     <Image
                         src={image}
                         alt={label}
+                        width={300}
+                        height={300}
                         className={`w-full h-full object-cover transition-all duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}
                     />
                     {/* Overlay to ensure text visibility */}

@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import {BackgroundGradientDemo} from "@/components/Logo";
+import Link from "next/link";
 
 
 const Navbar = () => {
@@ -74,7 +75,9 @@ const Navbar = () => {
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex md:items-center md:justify-between py-4">
                     <div className="flex-shrink-0">
+                        <Link href={"/"}>
                         <BackgroundGradientDemo />
+                        </Link>
                     </div>
 
                     <div className="flex items-center space-x-8">
